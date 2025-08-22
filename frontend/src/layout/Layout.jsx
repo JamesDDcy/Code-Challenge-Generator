@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Layout() {
+export function Layout() {
     return <>
     </>
 }

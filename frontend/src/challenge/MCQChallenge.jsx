@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MCQChallenge() {
+export function MCQChallenge() {
     return <>
     </>
 }

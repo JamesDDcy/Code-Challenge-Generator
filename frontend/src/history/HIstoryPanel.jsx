@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HistoryPanel() {
-    return <>
-    </>
+export function HistoryPanel() {
+    return <p> Test
+    </p>
 }

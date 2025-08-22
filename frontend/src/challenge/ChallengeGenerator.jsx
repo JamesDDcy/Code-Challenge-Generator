@@ -1,6 +1,6 @@
 import React from 'react';
 
 export function ChallengeGenerator() {
-    return <>
-    </>
+    return <p> Test
+    </p>
 }

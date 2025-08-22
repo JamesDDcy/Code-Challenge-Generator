@@ -1,0 +1,5 @@
+- export default exports a single value (function, class, object, etc.) as the default export of the file. You import it without curly braces:
+import MyComponent from './MyComponent'
+
+- export (named export) allows you to export multiple values from a file. You import them with curly braces:
+import { MyComponent } from './MyComponent'
