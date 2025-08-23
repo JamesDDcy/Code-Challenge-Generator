@@ -3,6 +3,7 @@ from fastapi import FastAPI, Request, Response
 
 # This makes sure that our frontend can send requests to our backend
 from fastapi.middleware.cors import CORSMiddleware
+from .routes import challenge
 
 app = FastAPI()
 
@@ -13,3 +14,4 @@ app.add_middleware(CORSMiddleware,
                     allow_methods=["*"], 
                     allow_headers=["*"])
 
+app.include_router(challenge.router, prefix="/api")
