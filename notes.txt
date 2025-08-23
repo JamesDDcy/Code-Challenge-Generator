@@ -3,3 +3,5 @@ import MyComponent from './MyComponent'
 
 - export (named export) allows you to export multiple values from a file. You import them with curly braces:
 import { MyComponent } from './MyComponent'
+
+- We use Session for a database connection because it helps us safely talk to the database, keep track of changes, and make sure everything is saved or cleaned up properly. It’s like having a helper that manages your requests and makes sure nothing gets lost or mixed up.
