@@ -1,0 +1,11 @@
+- fastapi
+
+- since our auth happens on Clerk, when a new user was created, their quota is not being set. We don't know when the new user is created as it happens on Clerk. So we setup a webhook so any time an event happens in Clerk, we want to subscribe to it can automatically push that to our own backen.
+
+- export default exports a single value (function, class, object, etc.) as the default export of the file. You import it without curly braces:
+import MyComponent from './MyComponent'
+
+- export (named export) allows you to export multiple values from a file. You import them with curly braces:
+import { MyComponent } from './MyComponent'
+
+- We use Session for a database connection because it helps us safely talk to the database, keep track of changes, and make sure everything is saved or cleaned up properly. It’s like having a helper that manages your requests and makes sure nothing gets lost or mixed up.
