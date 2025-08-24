@@ -37,7 +37,7 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
                 {"role": "user", "content": f"Generate a {difficulty} difficulty coding challenge."}
             ],
             response_format={"type": "json_object"},
-            temperature=0.5
+            temperature=0.7
         )
 
         # we do choices[0] as it will be giving a list of responses even though we just did one
@@ -47,8 +47,7 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
         challenge_data = json.loads(content)
 
         # validation that our output is correct before sending it to the frontend
-        required_fields = {"title", "options", "correct_answer_id", "explanation"}
-
+        required_fields = ["title", "options", "correct_answer_id", "explanation"]
         for field in required_fields:
             if field not in challenge_data:
                 raise ValueError(f"Missing required field: {field}")
